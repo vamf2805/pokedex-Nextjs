@@ -7,8 +7,8 @@ const Card = ({pokemon}) =>{
 				<div className="grid grid-cols-4 gap-5">
 					{pokemon.map((item,index) =>(
 						<Link href={`pokemon/${index + 1}`}>
-							<div className="border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-white shadow-xl p-2 cursor-pointer" key={item.name}>
-								<div>
+							<div className="border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-white shadow-xl cursor-pointer" key={item.name}>
+								<div className="bg-red-500 p-5">
 									<img className="object-cover object-center" src={`${item.url_imagen}.png`} alt={item.name}/>
 								</div>
 								<div className="my-5 text-center">
