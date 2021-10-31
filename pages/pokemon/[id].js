@@ -10,7 +10,7 @@ const Pokemon = ({data, pokeId, url_imagen}) =>{
                 <div className="bg-red-500">
                     <img src={`${url_imagen}.png`} alt="" />
                 </div>
-                <div className="col-span-2 border-l text-center bg-gray-600 p-10">
+                <div className="border-l col-span-2 text-center bg-gray-600 p-10">
                     
                     <h2 className="text-white text-center capitalize text-3xl">{data.name} <span className="text-lg">N.º{pokeId}</span></h2>
                     {data.types.length > 1 ? (
@@ -47,9 +47,8 @@ export async function getStaticPaths(){
 
     
     const paths = results.map((poke,index) =>({
-        params:{id:index.toString() + 1}
+        params:{id:index.toString()}
     }))
-    console.log(paths, "paths")
     return{paths, fallback:true}
 }
 
