@@ -9,3 +9,16 @@ html,body,#__next{
     max-width: 1920px;
     margin: 0 auto;
 }
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+    background-image:
+    -webkit-linear-gradient(left, rgba(156, 163, 175, 1), rgba(239, 68, 68, 1)); 
+    border-radius: 2px;    
+    
+}
